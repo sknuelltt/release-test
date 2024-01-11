@@ -1,0 +1,50 @@
+name: Release Please (WIP)
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-please-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+       # for configuration see https://github.com/google-github-actions/release-please-action
+      - name: Release Please
+        uses: google-github-actions/release-please-action@v3.7
+        id: release-please
+        with:
+          default-branch: main
+          release-type: php
+          # By default, Release Please uses the built-in GITHUB_TOKEN secret. However, all resources created by
+          # release-please (release tag or release pull request) will not trigger future GitHub actions workflows, and
+          # workflows normally triggered by release.created events will also not run.
+          # Thus, we need to use a personal access token (PAT).
+          token: ${{ secrets.GITHUB_TOKEN }} # FIXME
+          pull-request-title-pattern: "chore(release): ${version}"
+          pull-request-header: ":robot: Merge this PR to release to production"
+
+#      -  name: Upload Release Artifact
+#         if: ${{ steps.release-please.outputs.release_created }}
+#         env:
+#            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: gh release upload ${{ steps.release-please.outputs.tag_name }} ./artifact/some-build-artifact.zip
+
+  deploy-helm-prd:
+    needs: release-please
+    # After merging the release PR, a release tag will be created containing this commit message.
+    if: contains(github.event.head_commit.message, 'chore(release)')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare vars for build
+        shell: bash
+        run: |
+          echo "TODO: update prod helm charts"
