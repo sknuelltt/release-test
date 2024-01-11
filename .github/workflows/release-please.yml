@@ -3,7 +3,7 @@ name: Release Please (WIP)
 on:
   push:
     branches:
-      - main
+      - release
 
 permissions:
   contents: write
@@ -22,7 +22,7 @@ jobs:
         uses: google-github-actions/release-please-action@v3.7
         id: release-please
         with:
-          default-branch: main
+          default-branch: release
           release-type: php
           # By default, Release Please uses the built-in GITHUB_TOKEN secret. However, all resources created by
           # release-please (release tag or release pull request) will not trigger future GitHub actions workflows, and
