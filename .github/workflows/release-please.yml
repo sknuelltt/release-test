@@ -23,6 +23,7 @@ jobs:
         id: release-please
         with:
           default-branch: release
+          target-branch: main
           release-type: php
           # By default, Release Please uses the built-in GITHUB_TOKEN secret. However, all resources created by
           # release-please (release tag or release pull request) will not trigger future GitHub actions workflows, and
