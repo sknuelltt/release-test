@@ -16,14 +16,15 @@ concurrency:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
        # for configuration see https://github.com/google-github-actions/release-please-action
       - name: Release Please
         uses: google-github-actions/release-please-action@v3.7
-        id: release-please
+        id: release
         with:
           default-branch: release
-          target-branch: main
           release-type: php
           # By default, Release Please uses the built-in GITHUB_TOKEN secret. However, all resources created by
           # release-please (release tag or release pull request) will not trigger future GitHub actions workflows, and
@@ -38,11 +39,16 @@ jobs:
 #         env:
 #            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #         run: gh release upload ${{ steps.release-please.outputs.tag_name }} ./artifact/some-build-artifact.zip
+      - name: Clean up
+        if: ${{ steps.release.outputs.release_created }}
+        shell: bash
+        run: |
+          echo "Clean up release branch"
 
   deploy-helm-prd:
     needs: release-please
-    # After merging the release PR, a release tag will be created containing this commit message.
-    if: contains(github.event.head_commit.message, 'chore(release)')
+    # After merging the release PR, a release tag will be created
+    if:  ${{ needs.release-please.outputs.release_created }} # contains(github.event.head_commit.message, 'chore(release)')
     runs-on: ubuntu-latest
     steps:
       - name: Prepare vars for build
