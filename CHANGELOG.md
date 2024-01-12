@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/sknuelltt/release-test/compare/v1.0.0...v1.0.1) (2024-01-12)
+
+
+### Bug Fixes
+
+* Hotfix B ([c2c1811](https://github.com/sknuelltt/release-test/commit/c2c18111c49f713e6aa9948f36efee7313428007))
+
 ## 1.0.0 (2024-01-12)
 
 
