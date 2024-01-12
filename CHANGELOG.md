@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/sknuelltt/release-test/compare/v1.0.1...v1.1.0) (2024-01-12)
+
+
+### Features
+
+* **BLS-404:** Not available ([926a8f8](https://github.com/sknuelltt/release-test/commit/926a8f836bad4dd377c3c2c00b68599f705f99b4))
+* **BLS-42:** The answer ([62549af](https://github.com/sknuelltt/release-test/commit/62549afb3607f3573581fc46dc92fee234ab9db0))
+
 ## [1.0.1](https://github.com/sknuelltt/release-test/compare/v1.0.0...v1.0.1) (2024-01-12)
 
 
