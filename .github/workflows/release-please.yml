@@ -21,7 +21,7 @@ jobs:
     steps:
        # for configuration see https://github.com/google-github-actions/release-please-action
       - name: Release Please
-        uses: google-github-actions/release-please-action@v3.7
+        uses: google-github-actions/release-please-action@v4
         id: release
         with:
           default-branch: main
@@ -31,8 +31,9 @@ jobs:
           # workflows normally triggered by release.created events will also not run.
           # Thus, we need to use a personal access token (PAT).
           token: ${{ secrets.GITHUB_TOKEN }} # FIXME
-          pull-request-title-pattern: "chore(release): ${version}"
-          pull-request-header: ":robot: Merge this PR to release to production"
+          config-file: .release-please-config.json
+          manifest-file: .release-please-manifest.json
+
 
 #      -  name: Upload Release Artifact
 #         if: ${{ steps.release-please.outputs.release_created }}
