@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.1](https://github.com/sknuelltt/release-test/compare/v1.1.0...v1.1.1) (2024-01-17)
+
+
+### Bug Fixes
+
+* **BLS-111:** A critical hotfix ([e84f52e](https://github.com/sknuelltt/release-test/commit/e84f52ef6bf049d86c7c438fbeac9ca3974aa1b9))
+
+
+### Miscellaneous Chores
+
+* Update CHANGELOG.md ([477571e](https://github.com/sknuelltt/release-test/commit/477571e8bc0ad6262d82a52bedf72fc954c1a64e))
+
 ## [1.1.0](https://github.com/sknuelltt/release-test/compare/v1.0.1...v1.1.0) (2024-01-12)
 
 
