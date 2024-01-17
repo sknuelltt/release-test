@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.2.0](https://github.com/sknuelltt/release-test/compare/v1.1.0...v1.2.0) (2024-01-17)
+
+
+### Features
+
+* **BLS-401:** Unauthorized ([f3b6e4d](https://github.com/sknuelltt/release-test/commit/f3b6e4d3114a6ccc8cc3c8c289dbd8a739b7a566))
+
+
+### Bug Fixes
+
+* **BLS-111:** A critical hotfix ([2538413](https://github.com/sknuelltt/release-test/commit/2538413a89d09092383badf0814f6d0a7f07b1c2))
+
+
+### Miscellaneous Chores
+
+* **hotfix:** release 1.1.1 ([#14](https://github.com/sknuelltt/release-test/issues/14)) ([201fa92](https://github.com/sknuelltt/release-test/commit/201fa925479d9d7c132627572045d451ea9e4049))
+* Update CHANGELOG.md ([477571e](https://github.com/sknuelltt/release-test/commit/477571e8bc0ad6262d82a52bedf72fc954c1a64e))
+
 ## [1.1.1](https://github.com/sknuelltt/release-test/compare/v1.1.0...v1.1.1) (2024-01-17)
 
 
