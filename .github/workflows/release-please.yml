@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - hotfix
 
 permissions:
   contents: write
@@ -24,7 +25,6 @@ jobs:
         uses: google-github-actions/release-please-action@v4
         id: release
         with:
-          default-branch: main
           release-type: php
           # By default, Release Please uses the built-in GITHUB_TOKEN secret. However, all resources created by
           # release-please (release tag or release pull request) will not trigger future GitHub actions workflows, and
@@ -34,17 +34,16 @@ jobs:
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
 
-
 #      -  name: Upload Release Artifact
 #         if: ${{ steps.release-please.outputs.release_created }}
 #         env:
 #            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #         run: gh release upload ${{ steps.release-please.outputs.tag_name }} ./artifact/some-build-artifact.zip
-      - name: Clean up
-        if: ${{ steps.release.outputs.release_created }}
+      - name: Cherry-pick squashed hotfix release commit to main
+        if: ${{ (steps.release.outputs.release_created) && (github.ref == 'refs/heads/hotfix') }}
         shell: bash
         run: |
-          echo "Clean up release branch"
+          echo "Cherry-pick squashed hotfix release commit to main"
 
   deploy-helm-prd:
     needs: release-please

@@ -5,6 +5,8 @@
   "pull-request-title-pattern": "chore(release): ${version}",
   "pull-request-header": ":robot: Merge this PR to release to production",
   "packages": {
-    ".": {}
+    ".": {
+      "pull-request-header": ":robot: Merge this PR to release to production"
+    }
   }
 }
