@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/sknuelltt/release-test/compare/v1.3.0...v1.3.1) (2024-01-18)
+
+
+### Bug Fixes
+
+* **FOO-J:** Critical hotfix on base 1.3.0 ([06c1933](https://github.com/sknuelltt/release-test/commit/06c1933aa5e212b00d746835190f151ad096bfb6))
+
 ## [1.3.0](https://github.com/sknuelltt/release-test/compare/v1.2.0...v1.3.0) (2024-01-18)
 
 
