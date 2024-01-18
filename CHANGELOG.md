@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.3.0](https://github.com/sknuelltt/release-test/compare/v1.2.0...v1.3.0) (2024-01-18)
+
+
+### Features
+
+* **FOO-A:** Feature A ([9b3cbb6](https://github.com/sknuelltt/release-test/commit/9b3cbb67d8a10947c778e861248fefae0501c4e2))
+* **FOO-B:** Feature B ([0a35981](https://github.com/sknuelltt/release-test/commit/0a35981811d65291ccb38f53e878cd24e9f3da39))
+* **FOO-D:** Feature D ([3defd54](https://github.com/sknuelltt/release-test/commit/3defd545a844b3b9dcc285cb10908b600c6b35d7))
+* **FOO-E:** Feature E ([4ad73b8](https://github.com/sknuelltt/release-test/commit/4ad73b8600e65265c92984eac1cfb2c4c3a4fff5))
+* **FOO-G:** Feature G ([21fe7d1](https://github.com/sknuelltt/release-test/commit/21fe7d11e6732b9a50de20ba7257b6a8b147a80b))
+
+
+### Bug Fixes
+
+* **FOO-C:** Fix C ([aec3ead](https://github.com/sknuelltt/release-test/commit/aec3eade834e13e09fb6ed620757971a6d97ccb2))
+* **FOO-F:** Critical hotfix on base 1.2.0 ([acd6c34](https://github.com/sknuelltt/release-test/commit/acd6c34829b8bcf4884e2ad976cb74f84c49c665))
+
+
+### Miscellaneous Chores
+
+* **hotfix:** release 1.2.1 ([#16](https://github.com/sknuelltt/release-test/issues/16)) ([4726430](https://github.com/sknuelltt/release-test/commit/4726430255b256f849b219e5ff7bf49a00e815d5))
+* Just a chore ([7af8cd0](https://github.com/sknuelltt/release-test/commit/7af8cd060dbaaafdc874a4164481a048f0242847))
+
 ## [1.2.1](https://github.com/sknuelltt/release-test/compare/v1.2.0...v1.2.1) (2024-01-18)
 
 
