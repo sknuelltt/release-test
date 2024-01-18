@@ -1,9 +1,8 @@
-name: Release Please (WIP)
+name: Release hotfix
 
 on:
   push:
     branches:
-      - main
       - hotfix
   workflow_dispatch:
 
@@ -38,11 +37,6 @@ jobs:
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
 
-#      -  name: Upload Release Artifact
-#         if: ${{ steps.release-please.outputs.release_created }}
-#         env:
-#            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         run: gh release upload ${{ steps.release-please.outputs.tag_name }} ./artifact/some-build-artifact.zip
       - name: Cherry-pick squashed hotfix release commit to main
         if: ${{ (steps.release.outputs.release_created) && (github.ref == 'refs/heads/hotfix') }}
         shell: bash
