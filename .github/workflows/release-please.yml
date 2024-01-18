@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
+    env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
        # for configuration see https://github.com/google-github-actions/release-please-action
       - name: Release Please
@@ -31,6 +33,7 @@ jobs:
           # workflows normally triggered by release.created events will also not run.
           # Thus, we need to use a personal access token (PAT).
           token: ${{ secrets.GITHUB_TOKEN }} # FIXME
+          target-branch: ${{ env.BRANCH_NAME }}
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
 
