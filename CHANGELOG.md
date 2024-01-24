@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/sknuelltt/release-test/compare/v1.4.0...v1.4.1) (2024-01-18)
+
+
+### Bug Fixes
+
+* **FOO-L:** Critical hotfix on base 1.4.0 ([e478e5f](https://github.com/sknuelltt/release-test/commit/e478e5f97ef3df587cd9a57e827b6f354dca324c))
+
 ## [1.4.0](https://github.com/sknuelltt/release-test/compare/v1.3.0...v1.4.0) (2024-01-18)
 
 
