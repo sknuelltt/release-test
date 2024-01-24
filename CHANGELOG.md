@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.5.0](https://github.com/sknuelltt/release-test/compare/v1.4.0...v1.5.0) (2024-01-24)
+
+
+### Features
+
+* **FOO-K:** Feature K ([a8d50b7](https://github.com/sknuelltt/release-test/commit/a8d50b78670ecacc7d7796bca25cba1d14fe15c9))
+
+
+### Bug Fixes
+
+* **FOO-L:** Critical hotfix on base 1.4.0 ([f609b41](https://github.com/sknuelltt/release-test/commit/f609b412ec8fbabc27b84213fb84620d22800eda))
+
+
+### Miscellaneous Chores
+
+* **hotfix:** release 1.4.1 ([2104505](https://github.com/sknuelltt/release-test/commit/2104505399ae25ba87950ecf15b50ea9b93ed855))
+
 ## [1.4.1](https://github.com/sknuelltt/release-test/compare/v1.4.0...v1.4.1) (2024-01-18)
 
 
