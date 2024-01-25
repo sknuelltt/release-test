@@ -1,8 +1,9 @@
-name: Release hotfix
+name: Release Please
 
 on:
   push:
     branches:
+      - main
       - hotfix
   workflow_dispatch:
 
@@ -36,12 +37,6 @@ jobs:
           target-branch: ${{ env.BRANCH_NAME }}
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
-
-      - name: Cherry-pick squashed hotfix release commit to main
-        if: ${{ (steps.release.outputs.release_created) && (github.ref == 'refs/heads/hotfix') }}
-        shell: bash
-        run: |
-          echo "Cherry-pick squashed hotfix release commit to main"
 
   deploy-helm-prd:
     needs: release-please
