@@ -7,10 +7,6 @@ on:
   push:
     branches:
       - 'release/**'
-    paths-ignore:
-      - .release-please-manifest.json
-      - CHANGELOG.md
-      - composer.json
   workflow_dispatch:
 
 permissions:
