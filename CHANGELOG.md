@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.6.0](https://github.com/sknuelltt/release-test/compare/v1.5.0...v1.6.0) (2024-02-21)
+
+
+### Features
+
+* **FOO-123:** Feature M ([bcbbd22](https://github.com/sknuelltt/release-test/commit/bcbbd223807eb768b1919d645add19f999dd9c0f))
+* **FOO-123:** Feature N ([2468291](https://github.com/sknuelltt/release-test/commit/2468291881f2fa634a1838f54c770a7be5b58ef9))
+* **FOO-123:** Feature P ([5ff33b7](https://github.com/sknuelltt/release-test/commit/5ff33b785f25849e96b6d3e149c105276faabd93))
+* **FOO-123:** Feature Q ([d6e94bc](https://github.com/sknuelltt/release-test/commit/d6e94bc6577165b9347bbee34c14a987055756e5))
+* **FOO-123:** Feature R ([2e15020](https://github.com/sknuelltt/release-test/commit/2e150202e974d64beb3da3379d68a082fbea71fc))
+
+
+### Bug Fixes
+
+* **FOO-123:** Hotfix for release ([1da0148](https://github.com/sknuelltt/release-test/commit/1da01485d2f9497e55219ea92e89d245d25b95b9))
+* **FOO-456:** Bugfix O ([4910f7e](https://github.com/sknuelltt/release-test/commit/4910f7e1382ee154a702feb68f566a1c6e95b5da))
+
 ## [1.5.0](https://github.com/sknuelltt/release-test/compare/v1.4.0...v1.5.0) (2024-01-24)
 
 
