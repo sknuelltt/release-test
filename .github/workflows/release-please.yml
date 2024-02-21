@@ -3,9 +3,11 @@ name: Release Please
 on:
   create:
     branches:
+      - 'release'
       - 'release/**'
   push:
     branches:
+      - 'release'
       - 'release/**'
   workflow_dispatch:
 
@@ -36,7 +38,7 @@ jobs:
           # workflows normally triggered by release.created events will also not run.
           # Thus, we need to use a personal access token (PAT).
           token: ${{ secrets.GITHUB_TOKEN }} # FIXME
-          target-branch: main
+          target-branch: ${{ env.BRANCH_NAME }}
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
 
